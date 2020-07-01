@@ -17,6 +17,20 @@ class con_umowy extends controllers_parent{
 		view::display();
 	}
 	
+	public static function formularz_umowy_krok0()
+	{
+		if(!session::is_logged())
+		{
+			app::err('Brak dostępu');
+			view::message();	
+		}
+
+		if(isset($_SESSION['a_umowa']['id_umowy_naglowki']))
+			unset($_SESSION['a_umowa']['id_umowy_naglowki']);
+
+		view::display();
+	}
+	
 	public static function formularz_umowy_krok1()
 	{
 		if(!session::is_logged() && (empty($_GET['hash']) || !hlp_validator::alfanum($_GET['hash'])))
@@ -41,10 +55,13 @@ class con_umowy extends controllers_parent{
 		if(isset($_SESSION['a_umowa']['id_umowy_naglowki']))
 			unset($_SESSION['a_umowa']['id_umowy_naglowki']);
 		
+		$wariant_umowy = isset($_GET['wariant_umowy']) ? $_GET['wariant_umowy'] : 'pelny';
+
 		view::add('czy_ma_typ_umowy_2', mod_umowy::czy_ma_typ_umowy(2));
 		view::add('a_umowy_typy', mod_umowy::get_umowy_typy());
 		view::add('a_umowy_naglowki', mod_umowy::get_umowy_naglowki());
 		view::add('hash', isset($_GET['hash']) ? $_GET['hash'] : false);
+		view::add('wariant_umowy', $wariant_umowy);
 
 		view::display();
 	}
@@ -111,6 +128,7 @@ class con_umowy extends controllers_parent{
 		view::add('a_placowka', mod_placowki::get_placowka(session::get('id_placowki')));
 		view::add('a_dane_nabywcy', mod_placowki::get_dokumenty_sprzedazy(session::get('id_placowki')));
 		view::add('czy_szkoly_lub_pracodawcy',mod_placowki::get_pracodawcy(session::get('id_placowki'),$_POST['a_umowa']['id_umowy_typy']==2 ? true : false));
+		view::add('wariant_umowy', $_POST['a_umowa']['wariant_umowy']);
 		
 		view::display();
 	}
@@ -140,7 +158,8 @@ class con_umowy extends controllers_parent{
 			session::set('hash', $_POST['hash']);
 			view::add('hash', $_POST['hash']);
 		}
-		view::add('umowa', mod_umowy::generuj_umowe($_POST['a_umowa']['id_umowy_naglowki'], $_POST['a_umowa']['id_umowy_typy'], $_POST['a_umowa']));
+
+		view::add('umowa', mod_umowy::generuj_umowe($_POST['a_umowa']['id_umowy_naglowki'], $_POST['a_umowa']['id_umowy_typy'], $_POST['a_umowa'],  $_POST['a_umowa']['wariant_umowy']));
 
 		view::display();
 	}

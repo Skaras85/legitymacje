@@ -74,7 +74,7 @@ class con_przesylki extends controllers_parent{
 			{
 				$id_users = db::get_one("SELECT id_users FROM placowki WHERE id_placowki=".$a_przesylka['id_placowki']);
 				$email = db::get_one("SELECT email FROM users WHERE id_users=".$id_users);
-				mod_users::wyslij_maila($email,7);
+				mod_users::wyslij_maila($email,7,'','',$a_przesylka);
 			}
 			view::redirect('przesylki/lista-przesylek');
 		}

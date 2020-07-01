@@ -61,6 +61,8 @@ class con_koszyk extends controllers_parent{
 		
 		if($a_produkty)
 			$cena_laczna_produktow = mod_produkty::ustal_cene_produktow($a_produkty);
+		
+		session::delete('data_wydania');
 
 		view::add('id_karty',mod_koszyk::get_id_karty_z_koszyka(session::get_id()));
 		view::add('tabela',mod_koszyk::get_legitymacje_tabela(session::get_id()));
@@ -78,6 +80,15 @@ class con_koszyk extends controllers_parent{
 		
 		if(session::get('czy_zdalny') && !empty($_POST['id_przesylki']) && hlp_validator::id($_POST['id_przesylki']))
 			session::set('id_przesylki',$_POST['id_przesylki']);
+		
+		if(mod_koszyk::get_id_karty_z_koszyka(session::get_id())!=1 && (!session::get('data_wydania') && (empty($_POST['data_wydania']) || !hlp_validator::data($_POST['data_wydania']))))
+		{
+			app::err('Nieprawidłowa data wydania');
+			view::redirect('koszyk/koszyk');
+		}
+		
+		if(isset($_POST['data_wydania']))
+			session::set('data_wydania', $_POST['data_wydania']);
 		
 		view::add('a_sposoby_wysylki',mod_koszyk::get_sposoby_wysylki(true));
 		view::add('a_sposoby_platnosci',mod_koszyk::get_sposoby_platnosci());
@@ -155,6 +166,9 @@ class con_koszyk extends controllers_parent{
 		
 		$wartosc_zamowienia += $cena_przesylki;
 
+		if(session::get('data_wydania'))
+			view::add('data_wydania', session::get('data_wydania'));
+		
 		view::add('a_user',mod_users::get_user(session::get_id()));
 		view::add('wartosc_zamowienia',$wartosc_zamowienia);
 		view::add('a_sposob_wysylki',mod_koszyk::get_sposob_wysylki($_POST['a_zamowienie']['id_sposoby_wysylki']));
@@ -272,6 +286,11 @@ class con_koszyk extends controllers_parent{
 			app::ok('Dziękujemy za złożenie zamówienia. Zamówienie otrzymało numer '. db::get_one("SELECT numer_zamowienia FROM zamowienia WHERE id_zamowienia=$id_zamowienia"));
 			view::message();
 		}
+	}
+
+	public static function formularz_daty_wydania()
+	{
+		view::display();
 	}
 
 	public static function dodaj_karty_do_zamowienia()
