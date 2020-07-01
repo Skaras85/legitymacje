@@ -1,0 +1,191 @@
+body{
+    font-size: 12px;
+}
+
+.smallText{
+    font-size: 10px;
+}
+
+.tytul{
+    text-align: center;
+    font-size: 11px;
+    margin-bottom: 30px;
+}
+
+#logo{
+    width: 220px;
+}
+
+.tabela_tytulowa{
+    border: solid grey 2px;
+    border-left-width: 3px;
+    border-right-width: 3px;
+    width: 450px;
+    /*position: absolute;*/
+    right: 0;
+    border-collapse: collapse;
+    float: right;
+}
+
+.tabela_tytulowa th{
+    font-size: 14px;
+    border: solid grey 2px;
+    font-weight: normal;
+    background: url('../images/pdfy/th-bg.png');
+}
+
+.tabela_tytulowa td{
+    padding: 2px 5px;
+}
+
+#osoby_wrapper{
+    position: relative;
+}
+
+#sprzedawca{
+    margin-top: 40px;
+    width: 33%;
+    float: left;
+}
+
+#nabywca{
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 33%;
+}
+
+#odbiorca{
+    position: absolute;
+    left: 40%;
+    top: 40px;
+    width: 33%;
+}
+
+#linia{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.tabela{
+    border: solid black 1px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabela th{
+    font-weight: normal;
+    border: solid black 1px;
+}
+
+.tabela td{
+    border: solid black 1px;
+    padding: 3px;
+}
+
+.toRight{
+    text-align: right;
+}
+
+.podsumowanie{
+    width: 50%;
+}
+
+.wrapper{
+    position: relative;
+    margin-top: 20px;
+}
+
+.tabelka_blank{
+    position: absolute;
+    width: 45%;
+    right: 0;
+    top: 0;
+}
+
+.tabelka_blank td{
+    text-align: right;
+}
+
+#podpis_osoby_wystawiajacej{
+    /*position: absolute;
+    bottom: 40px;*/
+    left: 0;
+    width: 200px;
+    float: left;
+    margin-top: 200px;
+}
+
+#podpis_osoby_odbierajacej{
+    /*position: absolute;
+    bottom: 40px;*/
+    right: 0;
+    width: 200px;
+    float: right;
+    margin-top: 200px;
+}
+
+
+
+.stopka{
+    text-align: center;
+    font-size: 11px;
+    /*position: absolute;
+    bottom: 0;
+    left: 230px;*/
+}
+
+.center{
+    text-align: center;
+}
+
+.uwagi_faktura{
+    font-size: 18px;
+    margin-top: 120px;
+}
+
+#komunikat{
+    margin-top: 30px;
+}
+
+    #komunikat p{
+        font-size: 18px;
+    }
+
+    #komunikat .bigFont{
+        font-size: 28px;
+    }
+
+.newPage{
+    page-break-after: always !important;
+}
+
+.clear{
+    clear: both;
+}
+
+.podpis_osoby_realizujacej{
+    width: 400px;
+    float: right;
+    margin-top: 200px;
+    border-top: dotted black 1px;
+    font-size: 14px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.podpis_blank{
+    width: 150px;
+}
+
+.protokol_title{
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.protokol_data{
+    font-size: 18px;
+    margin-bottom: 30px;
+}

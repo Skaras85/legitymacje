@@ -1,0 +1,244 @@
+@media screen and (max-width: 1100px) {
+    
+    /*body{
+        background-attachment: scroll;
+    }*/
+   
+    #home{
+        min-height: auto;
+    }
+    
+    
+    
+    #headerWrapper,
+    #siteWrapper,
+    #mainFooter,
+    #pokojeDiv,
+    #w_skrocie,
+    #historia,
+    main.room,
+    #kontakt,
+    #kontaktForm,
+    .contact,
+    #rezerwacjaWrapper,
+    .sectionContent {
+        width: auto;
+    }
+    
+    #w_skrocie,
+    #historia,
+    #mainFooter,
+    #pokojeDiv,
+    #w_skrocie,
+    main.room,
+    .contact,
+    #rezerwacjaWrapper{
+        padding: 0 20px;
+    }
+    
+    #mainNav{
+        padding-left: 0;
+    }
+    
+    #kontakt{
+        float: none;
+    }
+    
+    #kontaktForm{
+        float: none;
+        margin: 0;
+        margin-top: 20px;
+    }
+    
+    #mainNav > ul > li,
+    #mainNav #nav_4{
+        margin-left: 0;
+    }
+    
+    #respMenu{
+        margin-left: 68px;
+    }
+    
+    .pokoj_wrapper{
+        width: 31%;
+    }
+    
+    .pokoj_pierwszy, .pokoj_drugi{
+        margin-right: 2%;
+    }
+    
+    .pokoj_wrapper img{
+        width: 100%;
+    }
+
+    #respMenu{
+        position: relative;
+        width: 100px;
+        cursor: pointer;
+    }
+    
+   .respMenu-handler{
+       margin-left: 30px;
+       color: #fff;
+   }
+        
+   .respMenu-handler:after{
+       height: 3px;
+       width: 15px;
+       position: absolute;
+       top: 8px;
+       left: 0px;
+       background: #fff;
+       box-shadow: 0 5px 0 #fff, 0 -5px 0 #fff;
+       content: '';
+       display: block;
+       cursor: pointer;
+   }
+
+   #mainNav > ul{
+       position: absolute;
+       left: 0;
+       top: 53px;
+       width: 100%;
+   }
+   
+    #mainNav > ul > li{
+        float: none;
+        width: 100% !important;
+        background: #000 !important;
+        border-bottom: solid #fff 1px;
+        display: none;
+        margin: 0 !important;
+    }
+    
+    #mainNav a{
+        color: #fff;
+        display: block;
+        padding: 10px 0;
+    }
+    
+    #mainNav li ul{
+        position: static;
+        background: none;
+    }
+    
+    #mainNav li ul li{
+        margin :0;
+        border-top: solid #fff 1px;
+        border-bottom: 0;
+    }
+    
+    #mainNav li ul li a{
+        margin: 0;
+        padding: 10px 30px !important;
+    }
+
+    .calendar{
+        margin: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .contact input[type="text"], 
+    .contact textarea{
+        width: 100% !important;
+    }
+
+    .required{
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    
+    #mainHeader{
+        margin-top: 19px;
+    }
+    
+    .termin{
+       display: block;
+       text-align: center;
+    }
+    
+    .wolny_termin{
+        margin: 0;
+    }
+    
+    td, th{
+        font-size: 13px;
+    }
+    
+    .calendar-hour,
+    .occupied{
+        display: block !important;
+        width: 100% !important;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    
+    #respMenu{
+        margin-left: 10px;
+    }
+    
+    #mainFooter li{
+        display: block;
+    }
+    
+    #mainFooter ul{
+        margin-bottom: 20px;
+    }
+    
+    .pokoj_wrapper{
+        width: auto;
+        margin: 0;
+        float: none;
+        margin-bottom: 20px;
+    }
+    
+    .room_img{
+        float: none;
+        padding: 0;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    #strona_linki{
+        float: none;
+    }
+    
+    #historia{
+        background: rgba(0,0,0,0.5);
+    }
+    
+    .radioWrapper{
+        margin-left: 0;
+    }
+    
+    .radioWrapper label{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    #logo{
+        width: 100%;
+        background-position: center 0;
+    }
+    
+    .inactive,
+    .dni-tygodnia{
+        display: none;
+    }
+    
+    td{
+        display: block;
+        width: 100%;
+    }
+    
+    .calendar{
+        margin: auto;
+    }
+}

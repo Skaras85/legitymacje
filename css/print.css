@@ -1,0 +1,29 @@
+@page{
+    padding: 0;
+    margin: 0;
+    width: 86mm;
+    height: 54mm;
+}
+
+body{
+    background: none;
+    color: #000 !important;
+}
+
+.printHide,
+#userNav,
+.print{
+    display: none;
+}
+
+section{
+    background: none;
+    border: none;
+    margin: 0;
+    width: auto;
+    padding: 0;
+}
+
+.page_break{
+    page-break-after: always;
+}

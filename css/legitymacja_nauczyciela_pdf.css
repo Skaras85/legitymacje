@@ -1,0 +1,184 @@
+@page{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+body{
+    background: none;
+    color: #000 !important;
+    font-family: dejavu sans,'Arial' !important;
+}
+
+p{
+	margin: 0;
+}
+
+.clear{
+	clear: both;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+} 
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.formularz{
+	border-bottom: dashed #000 1px;
+	margin-bottom: 75px;
+	page-break-inside: avoid;
+}
+
+	.formularz:last-of-type,
+	.formularz:nth-of-type(2n){
+		border: none;
+	}
+	
+	.formularz:nth-of-type(2n){
+        page-break-after: always;
+    }
+    
+    .formularz:last-of-type{
+        page-break-after: avoid;
+    }
+
+.top_left{
+	float: left;
+	width: 202px;
+}
+
+	.id_nauczyciela{
+		color: grey;
+		float: left;
+	}
+	
+		.id_nauczyciela img{
+			display: inline-block;
+		}
+
+	.numer{
+		font-size: 7px;
+	}
+
+	.legitymacja{
+		border: solid #000 1px;
+		width: 185px;
+		height: 230px;
+		margin-top: 10px;
+	}
+	
+	.okres_umowy{
+		margin-top: 5px;
+	}
+
+		.okres_umowy_label{
+			margin-top: 10px;
+			font-weight: bold;
+			text-align: center;
+			font-size: 12px;
+		}
+		
+		.okres_umowy_kratka{
+			border: solid #000 1px;
+			height: 15px;;
+			width: 15px;
+			line-height: 15px;
+			text-align: center;
+			float: left;
+		}
+		
+		.okres_umowy_napis{
+			float: left;
+			line-height: 20px;
+			margin-left: 10px;
+		}
+
+		.ookres_umowy_przypis{
+			margin-top: 10px;
+			color: grey;
+			font-size: 8px;
+		}
+
+.top_right{
+	float: right;
+	margin-left: 30px;
+}
+
+	.title{
+		font-size: 18px;
+	}
+
+	.under_title{
+		font-size: 10px;
+	}
+	
+	.nazwiska{
+		margin-top: 10px;
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+
+		.nazwiska span{
+			font-size: 18px;
+		}
+		
+		.nazwisko{
+			font-size: 30px;
+			margin-top: 5px;
+		}
+		
+	.wzor_podpisu{
+		margin-top: 30px;
+	}
+
+		.wzor_podpisu_text{
+			float: left;
+			margin-top: 20px;
+		}
+		
+			.wzor_podpisu_label{
+				font-size: 18px;
+			}
+			
+			.wzor_podpisu_przypis{
+				font-size: 10px;
+			}
+
+	.wzor_podpisu_wzor{
+		border: solid #000 1px;
+		width: 300px;
+		height: 100px;
+		float: left;
+		margin-left: 20px;
+	}
+	
+.terms{
+	margin-top: 10px;
+	font-size: 10px;
+}
+
+.podpisy{
+	margin-top: 110px;
+	text-align: center;
+	margin-bottom: 55px;
+}
+
+	.pieczatka{
+		border-top: dotted #000 1px;
+		float: left;
+		width: 60%;
+	}
+	
+	.podpis{
+		border-top: dotted #000 1px;
+		float: right;
+		width: 30%;
+	}

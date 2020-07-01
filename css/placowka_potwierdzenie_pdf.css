@@ -1,0 +1,69 @@
+@page{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+body{
+    background: none;
+    color: #000 !important;
+    font-family: dejavu sans,'Arial' !important;
+}
+
+p{
+	margin: 0 0 15px 0;
+	font-size: 18px;
+}
+
+.clear{
+	clear: both;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+} 
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.center{
+	text-align: center;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.marginTop20{
+	margin-top: 40px;
+}
+
+.left{
+	float: left;
+	width: 50%;
+}
+
+.right{
+	float: right;
+	width: 50%;
+}
+
+.pieczatki{
+	margin-top: 210px;
+}
+
+	.pieczatki div{
+		border-top: dotted #000 1px;
+		padding-top: 5px;
+		width: auto;
+	}
+
+.stopka{
+	margin-top: 100px;
+}
