@@ -2346,6 +2346,27 @@ input.green:active {
     .multiSelect.osoby{
         margin-top: 0;
     }
+    
+.umowy_wybor_wariantu_wrapper{
+    width: 800px;
+    margin: auto;
+}
+    
+    .umowy_wybor_wariantu_wrapper a{
+        display: inline-block;
+        width: 380px;
+        padding: 50px 0;
+        text-align: center;
+        border: solid #000 1px;
+    }
+    
+        .umowy_wybor_wariantu_wrapper a:nth-of-type(1){
+            margin-right: 30px;
+        }
+        
+        .umowy_wybor_wariantu_wrapper a:hover{
+            text-decoration: none;
+        }
 
 /* Retina support */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
